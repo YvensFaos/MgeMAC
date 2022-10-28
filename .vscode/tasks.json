@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [   
+        {
+            "label": "Build",
+            "type": "shell",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "command": "g++",
+            "args": [
+                "-g", 
+                "-o",
+                "mge.exe",
+                "-std=c++17",
+                "main.cpp",
+                "mge/**/*.cpp",
+                "-I/Users/yre03/Dev/Repositories/SFML-2.5.1-macos-clang/include",
+                "-I/Users/yre03/Dev/Repositories/vcpkg/installed/x64-osx/include",
+                "/Users/yre03/Dev/Repositories/vcpkg/installed/x64-osx/lib/libGLEW.a",
+                "/Users/yre03/Dev/Repositories/SFML-2.5.1-macos-clang/lib/libsfml-system.dylib",
+                "/Users/yre03/Dev/Repositories/SFML-2.5.1-macos-clang/lib/libsfml-graphics.dylib",
+                "/Users/yre03/Dev/Repositories/SFML-2.5.1-macos-clang/lib/libsfml-window.dylib",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Versions/Current/OpenGL.tbd",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Cocoa.framework/Versions/Current/Cocoa.tbd",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Versions/Current/IOKit.tbd",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreVideo.framework/Versions/Current/CoreVideo.tbd"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
